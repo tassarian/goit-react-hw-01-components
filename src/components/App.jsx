@@ -3,7 +3,6 @@ import { User } from './User/User';
 import { Statistics } from './Statistic/Statistic';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionsHistory } from './TransactionHistory/TransactionHistory';
-import { createGlobalStyle } from 'styled-components';
 
 export class App extends Component {
 	render() {
