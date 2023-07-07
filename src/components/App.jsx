@@ -1,16 +1,19 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component } from 'react';
+import { User } from './User/User';
+import { Statistics } from './Statistic/Statistic';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionsHistory } from './TransactionHistory/TransactionHistory';
+import { createGlobalStyle } from 'styled-components';
+
+export class App extends Component {
+	render() {
+		return (
+			<>
+				<User title="Profile" />
+				<Statistics title="Statistic" />
+				<FriendList title="Friends list" />
+				<TransactionsHistory title="Transaction history" />
+			</>
+		);
+	}
+}
