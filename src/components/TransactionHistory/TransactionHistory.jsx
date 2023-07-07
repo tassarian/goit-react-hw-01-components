@@ -1,9 +1,8 @@
 import { Container } from 'components/User/User.styled';
-import data from '../../assets/transactions.json';
 import { TableData, TableHeader } from './TransactionHistory.styled';
 import { PropTypes } from 'prop-types';
 
-export const TransactionsHistory = ({ title }) => {
+export const TransactionsHistory = ({ title, data }) => {
 	return (
 		<Container>
 			<h2>{title}</h2>
@@ -36,4 +35,5 @@ export const TransactionsHistory = ({ title }) => {
 
 TransactionsHistory.propTypes = {
 	title: PropTypes.string,
+	data: PropTypes.array,
 };

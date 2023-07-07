@@ -12,11 +12,8 @@ import {
 	Value,
 } from './User.styled';
 import { PropTypes } from 'prop-types';
-import userData from '../../assets/user.json';
 
-export const User = ({ title }) => {
-	const { username, tag, location, avatar, stats } = userData;
-
+export const User = ({ title, username, tag, location, avatar, stats }) => {
 	return (
 		<Container>
 			<h2>{title}</h2>
@@ -48,4 +45,9 @@ export const User = ({ title }) => {
 
 User.propTypes = {
 	title: PropTypes.string,
+	username: PropTypes.string,
+	tag: PropTypes.string,
+	location: PropTypes.string,
+	avatar: PropTypes.string,
+	stats: PropTypes.object,
 };

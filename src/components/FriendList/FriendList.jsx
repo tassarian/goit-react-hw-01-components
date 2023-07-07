@@ -1,23 +1,15 @@
 import { Container } from 'components/User/User.styled';
 import { PropTypes } from 'prop-types';
-import friends from '../../assets/friends.json';
-import { Avatar, FriendsItem, Name, Status, List } from './FriendList.styled';
+import { List } from './FriendList.styled';
+import { FriendItem } from './FriendsItem';
 
-export const FriendList = ({ title }) => {
+export const FriendList = ({ title, data }) => {
 	return (
 		<Container>
 			<h2>{title}</h2>
 
 			<List>
-				{friends.map(({ avatar, name, isOnline, id }) => {
-					return (
-						<FriendsItem key={id}>
-							<Status color={isOnline ? 'green' : 'red'} />
-							<Avatar src={avatar} alt={name} />
-							<Name>{name}</Name>
-						</FriendsItem>
-					);
-				})}
+				<FriendItem data={data} />
 			</List>
 		</Container>
 	);
@@ -25,4 +17,5 @@ export const FriendList = ({ title }) => {
 
 FriendList.propTypes = {
 	title: PropTypes.string,
+	data: PropTypes.array,
 };
